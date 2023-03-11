@@ -1,0 +1,22 @@
+title: Svyat developing...
+author: Svyatoslav Feldsherov
+email: svyat@feldsherov.name
+description: >-
+  Software engineering staff which helps me produce endorphins. 
+baseurl: ""
+url: ""
+github_username:  feldsherov
+linkedin_username: svyat
+
+theme: minima
+
+exclude:
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
