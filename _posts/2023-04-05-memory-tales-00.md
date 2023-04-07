@@ -5,7 +5,7 @@ date:   2023-04-05 10:00:00 +0003
 tags: C++ memory-leak profiling
 ---
 
-Let's consider situational, which an average C++ developer will meet once in a while.
+Let's consider a situation, which an average C++ developer will meet once in a while.
 
 After a rollout of a new release of an application, instances started to catch OOM, not so often. Every instance OOMs once per several hours. What could it be, and how to deal with it?
 
