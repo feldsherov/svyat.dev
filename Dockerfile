@@ -14,10 +14,6 @@ EXPOSE 4000
 
 WORKDIR /site
 
-ENTRYPOINT [ "jekyll" ]
-
-CMD [ "--help" ]
-
 # build from the image we just built with different metadata
 FROM ghcr.io/bretfisher/jekyll:latest as jekyll-serve
 

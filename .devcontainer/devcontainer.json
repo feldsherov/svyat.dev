@@ -1,0 +1,10 @@
+{
+	"name": "svyat.dev-devcontainer",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "svyat.dev",
+	"workspaceFolder": "/site/",
+	"shutdownAction": "stopCompose",
+	"containerEnv": {
+		"JEKYLL_ENV": "development"
+	}
+}
