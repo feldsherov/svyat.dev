@@ -7,6 +7,7 @@ baseurl: ""
 url: ""
 github_username:  feldsherov
 linkedin_username: svyat
+google_analytics: true
 
 theme: minima
 
