@@ -23,7 +23,7 @@ Here are a few things to pay attention to:
 
 1. Trivial but still essential. Do not forget to build the same version as in production :)
 2. The address sanitizer build is 3-5% slower than the usually optimized release build. So, if your application is latency sensitive it could be a problem. Another option is to build with leak sanitizer only, which promises to have merely zero overhead in runtime. 
-3. Leak checks of address sanitizer sometimes triggered on shutdown only. Stop your application correctly, not
+3. Leak checks of address sanitizer sometimes triggered on shutdown only. Stop your application correctly, not kill it.
 
 In most cases, it will find the bug.
 
@@ -31,7 +31,7 @@ In most cases, it will find the bug.
 
 What is a memory leak in terms of memory sanitizer? A leak is a memory that is not freed after shutdown.
 
-But can we imagine OOM when we free all memory eventually? Sure, why not. Here is a "real-world example"
+But can we imagine OOM when we free all memory eventually? Sure, why not. Here is a "real-world example".
 
 A service was designed to reload configs only during the start. And somewhere in the middle of the code base live class like this:
 
@@ -71,7 +71,7 @@ class ConfigStorage() {
 	}
 	
 	int Release(int id) {
-		storage_[id].Clear();  // <- fun stuff could be hidden is here
+		storage_[id].Clear();  // <- fun stuff could be hidden here
 		IdFreed(id);
 	}
 
@@ -79,7 +79,7 @@ class ConfigStorage() {
 };
 ```
 
-Clear often has semantics not releasing the memory, just clearing the object. The is a case for protobuf, std::vector, std::string, easy to invent less popular examples.
+Clear often has semantics not releasing the memory, but just clearing the object. This is a case for protobuf, std::vector, std::string, easy to invent less popular examples.
 
 If configs are not uniform by size, we can get behavior very similar to a memory leak, as every config object will consume memory for the largest stored object. And memory consumption will grow during the life of the application, exactly like with a leak, but surely will be limited by the max size of a config multiplied by the size of the configs pool.
 
@@ -87,5 +87,5 @@ All the hardest to debug and detect leaks I saw are based on this mechanic.
 
 Be careful with clear and good luck!
 
---
+--\\
 Svyat
