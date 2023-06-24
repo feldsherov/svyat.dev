@@ -1,0 +1,34 @@
+/**
+ * Syntax highlighting styles
+ */
+
+$keyword-color: #458;
+$comment-color: #998;
+$string-literal-color: rgb(179, 18, 58);
+
+.highlight {
+  background: $background-color-code;
+  @extend %vertical-rhythm;
+
+  .highlighter-rouge & {
+    background: $background-color-code;
+  }
+
+  .c     { color: $comment-color; } // Comment
+  .c1    { color: $comment-color; } // Comment.Inline
+  .k     { color: $keyword-color } // Keyword
+  .kc    { color: $keyword-color } // Keyword.Constant
+  .kd    { color: $keyword-color } // Keyword.Declaration
+  .kp    { color: $keyword-color } // Keyword.Pseudo
+  .kr    { color: $keyword-color } // Keyword.Reserved
+  .kt    { color: $keyword-color } // Keyword.Type
+  .s     { color: $string-literal-color } // Literal.String
+  .sb    { color: $string-literal-color } // Literal.String.Backtick
+  .sc    { color: $string-literal-color } // Literal.String.Char
+  .sd    { color: $string-literal-color } // Literal.String.Doc
+  .s2    { color: $string-literal-color } // Literal.String.Double
+  .se    { color: $string-literal-color } // Literal.String.Escape
+  .sh    { color: $string-literal-color } // Literal.String.Heredoc
+  .si    { color: $string-literal-color } // Literal.String.Interpol
+  .sx    { color: $string-literal-color } // Literal.String.Other
+}
