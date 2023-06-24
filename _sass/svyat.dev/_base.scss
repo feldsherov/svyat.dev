@@ -1,7 +1,6 @@
 /**
  * Reset some basic elements
  */
-@use "sass:list";
 @use "sass:math";
 
 body, h1, h2, h3, h4, h5, h6,
@@ -17,7 +16,10 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight list.slash($base-font-size, $base-line-height) $base-font-family;
+  font-weight: $base-font-weight; 
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
