@@ -246,7 +246,7 @@ table {
     }
   }
   th, td {
-    padding: math.div($spacing-unit, 3) ($spacing-unit * 0.5);
+    padding: calc($spacing-unit, 3) ($spacing-unit * 0.5);
   }
   th {
     background-color: lighten($grey-color-dark, 3%);
